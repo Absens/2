@@ -1,26 +1,26 @@
-import { Sphere, useTexture } from '@react-three/drei'
+import { Sphere, useTexture } from "@react-three/drei";
 
-import { Object3D } from 'three'
-import { Clouds } from './Clouds'
-import type { Coord } from '../App'
-import { useRef } from 'react'
-import { Point } from './Point'
+import { Object3D } from "three";
+import { Clouds } from "./Clouds";
+import type { Coord } from "./App";
+import { useRef } from "react";
+import { Point } from "./Point";
 
-import { coordToVec3 } from './utils'
+import { coordToVec3 } from "./utils";
 
 export interface EarthProps {
-  coords: Coord[]
+  coords: Coord[];
 }
 
 export function Earth({ coords }: EarthProps) {
-  const forwardRef = useRef<Object3D | undefined>()
+  const forwardRef = useRef<Object3D | undefined>();
 
   const [earthColor, ocean] = useTexture([
-    '/textures/earth-color.jpg',
-    '/textures/earth-ocean.jpg',
-  ])
+    "/textures/earth-color.jpg",
+    "/textures/earth-ocean.jpg"
+  ]);
 
-  const radius = 1
+  const radius = 1;
   return (
     <group rotation={[0, 2, 0]}>
       {coords.map((coord) => (
@@ -42,8 +42,8 @@ export function Earth({ coords }: EarthProps) {
         />
       </Sphere>
     </group>
-  )
+  );
 }
 
-useTexture.preload('/textures/albedo.jpg')
-useTexture.preload('/textures/ocean-mask.jpg')
+useTexture.preload("/textures/albedo.jpg");
+useTexture.preload("/textures/ocean-mask.jpg");

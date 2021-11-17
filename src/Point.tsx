@@ -1,22 +1,23 @@
-import { Object3D } from 'three'
-import { Html } from '@react-three/drei'
-import { Coord } from './App'
+import { Object3D } from "three";
+import { Html } from "@react-three/drei";
+import { Coord } from "./App";
 
-import type { MutableRefObject } from 'react'
-import type { Vector3 } from 'three'
+import type { MutableRefObject } from "react";
+import type { Vector3 } from "three";
 
 export interface PointProps {
-  forwardRef: MutableRefObject<Object3D | undefined>
-  coord: Coord
-  position: Vector3
+  forwardRef: MutableRefObject<Object3D | undefined>;
+  coord: Coord;
+  position: Vector3;
 }
 
 export function Point({ forwardRef, coord, position }: PointProps) {
   return (
     <Html
-      className={`point  ${coord.hash ? 'hasHash' : ''}`}
+      className={`point  ${coord.hash ? "hasHash" : ""}`}
       position={position}
-      occlude={[forwardRef]}>
+      occlude={[forwardRef]}
+    >
       {coord.icon ? (
         <img
           onClick={(e) => (window.location.hash = coord.hash)}
@@ -32,5 +33,5 @@ export function Point({ forwardRef, coord, position }: PointProps) {
 
       <div className="text">{coord.description}</div>
     </Html>
-  )
+  );
 }
