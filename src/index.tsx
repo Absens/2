@@ -1,7 +1,7 @@
-import './styles.css'
-import { render } from 'react-dom'
-import { App } from './App'
-import { ErrorBoundary } from 'react-error-boundary'
+import { render } from "react-dom";
+import { ErrorBoundary } from "react-error-boundary";
+import { App } from "./App";
+import "./styles.css";
 
 render(
   <div className="earth">
@@ -12,5 +12,5 @@ render(
     </div>
   </div>,
 
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);

@@ -1,9 +1,8 @@
-import { Object3D } from "three";
 import { Html } from "@react-three/drei";
-import { Coord } from "./App";
-
 import type { MutableRefObject } from "react";
 import type { Vector3 } from "three";
+import { Object3D } from "three";
+import { Coord } from "./App";
 
 export interface PointProps {
   forwardRef: MutableRefObject<Object3D | undefined>;
@@ -11,7 +10,11 @@ export interface PointProps {
   position: Vector3;
 }
 
-export function Point({ forwardRef, coord, position }: PointProps) {
+export function Point({
+  forwardRef,
+  coord,
+  position
+}: PointProps): JSX.Element {
   return (
     <Html
       className={`point  ${coord.hash ? "hasHash" : ""}`}

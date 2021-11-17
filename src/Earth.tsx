@@ -1,18 +1,15 @@
 import { Sphere, useTexture } from "@react-three/drei";
-
-import { Object3D } from "three";
-import { Clouds } from "./Clouds";
-import type { Coord } from "./App";
 import { useRef } from "react";
+import { Object3D } from "three";
+import type { Coord } from "./App";
 import { Point } from "./Point";
-
 import { coordToVec3 } from "./utils";
 
 export interface EarthProps {
   coords: Coord[];
 }
 
-export function Earth({ coords }: EarthProps) {
+export function Earth({ coords }: EarthProps): JSX.Element {
   const forwardRef = useRef<Object3D | undefined>();
   const [earthColor, ocean] = useTexture([
     "/textures/earth-color.jpg",
@@ -31,7 +28,6 @@ export function Earth({ coords }: EarthProps) {
         />
       ))}
 
-      <Clouds />
       <Sphere ref={forwardRef} args={[radius, 32, 32]}>
         <meshPhongMaterial
           specularMap={ocean}

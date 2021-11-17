@@ -1,9 +1,9 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 import { CameraLight } from "./CameraLight";
-import { Stars } from "./Stars";
 import { Earth } from "./Earth";
+import { Stars } from "./Stars";
 
 export type Coord = {
   title: string;
