@@ -21,7 +21,7 @@ export function Earth({ coords }: EarthProps) {
 
   const radius = 1;
   return (
-    <group rotation={[0, 2, 0]}>
+    <group rotation={[0, 3, 0]}>
       {coords.map((coord) => (
         <Point
           position={coordToVec3(coord.lat, coord.lon, radius).position}

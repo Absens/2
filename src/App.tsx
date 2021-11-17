@@ -58,10 +58,10 @@ export function App() {
         <Earth coords={coords} />
         <OrbitControls
           enablePan={false}
-          autoRotateSpeed={0.2}
+          autoRotateSpeed={0.1}
           autoRotate
-          minDistance={1.8}
-          maxDistance={4}
+          minDistance={2}
+          maxDistance={3}
         />
       </Canvas>
     </Suspense>
