@@ -14,7 +14,6 @@ export interface EarthProps {
 
 export function Earth({ coords }: EarthProps) {
   const forwardRef = useRef<Object3D | undefined>();
-
   const [earthColor, ocean] = useTexture([
     "/textures/earth-color.jpg",
     "/textures/earth-ocean.jpg"
