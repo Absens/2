@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { CameraLight } from "./CameraLight";
 import { Earth } from "./Earth";
-import { Stars } from "./Stars";
 
 export type Coord = {
   title: string;
@@ -17,6 +16,26 @@ export type Coord = {
 };
 
 const coords: Coord[] = [
+  {
+    title: "Энергомикс",
+    lat: 54.890536,
+    lon: 20.599515,
+    hash: "#energomiks",
+    icon: "/logo_small.png",
+    link: "/portfolio/energomiks/",
+    location: "Аэропорт Храброво, Калининград, Россия",
+    description: "Авиационный ангар для стоянки и обслуживания вертолетов"
+  },
+  {
+    title: "СМТ",
+    lat: 55.753215,
+    lon: 37.622504,
+    hash: "#energomiks",
+    icon: "/logo_small.png",
+    link: "/portfolio/energomiks/",
+    location: "Аэропорт Храброво, Калининград, Россия",
+    description: "Авиационный ангар для стоянки и обслуживания вертолетов"
+  },
   {
     title: "Алерс Рус",
     lat: 51.525437,
@@ -55,15 +74,13 @@ export function App() {
         </div>
       }
     >
-      <Canvas dpr={[1, 2]}>
-        <color attach="background" args={[0x000000]} />
-
+      <Canvas dpr={[1, 1]}>
+        <color attach="background" args={[0x111111]} />
         <CameraLight />
-        <Stars />
         <Earth coords={coords} />
         <OrbitControls
           enablePan={false}
-          autoRotateSpeed={0.1}
+          autoRotateSpeed={0.2}
           autoRotate
           minDistance={2}
           maxDistance={3}

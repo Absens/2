@@ -27,7 +27,6 @@ export function Point({
         <img
           onClick={(e) => (window.location.hash = coord.hash)}
           alt={coord.title}
-          title={coord.title}
           src={coord.icon}
         /></a>
       ) : (
@@ -36,7 +35,7 @@ export function Point({
         </button>
       )}
 
-      <div className="text">{coord.description}</div>
+      <div className="text"><h4>{coord.title}</h4>{coord.description}</div>
     </Html>
   );
 }

@@ -12,8 +12,8 @@ export interface EarthProps {
 export function Earth({ coords }: EarthProps): JSX.Element {
   const forwardRef = useRef<Object3D | undefined>();
   const [earthColor, ocean] = useTexture([
-    "/textures/earth-color.jpg",
-    "/textures/earth-ocean.jpg"
+    "//unpkg.com/three-globe/example/img/earth-blue-marble.jpg",
+    "//unpkg.com/three-globe/example/img/earth-topology.png"
   ]);
 
   const radius = 1;
@@ -28,12 +28,12 @@ export function Earth({ coords }: EarthProps): JSX.Element {
         />
       ))}
 
-      <Sphere ref={forwardRef} args={[radius, 32, 32]}>
+      <Sphere ref={forwardRef} args={[radius, 164, 164]}>
         <meshPhongMaterial
           specularMap={ocean}
-          specular={0x404040}
+          specular={0x222222}
           map={earthColor}
-          shininess={30}
+          shininess={5}
         />
       </Sphere>
     </group>
