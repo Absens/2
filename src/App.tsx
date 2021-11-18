@@ -11,17 +11,22 @@ export type Coord = {
   lon: number;
   hash?: string;
   icon?: string;
+  link?: string;
+  location?: string;
   description?: string;
 };
 
 const coords: Coord[] = [
   {
-    title: "London",
+    title: "Алерс Рус",
     lat: 51.525437,
     lon: -0.127108,
     hash: "#london",
-    icon: "/me.png",
-    description: "Lorem ipsum, dolor"
+    icon: "/logo_small.png",
+    link: "/test/",
+    location: "Санкт-Петербург, Россия",
+    description:
+      "Мобильный надувной склад для хранения медицинского оборудования стоимостью около 40 миллиардов рублей"
   },
 
   {

@@ -18,7 +18,7 @@ export function Earth({ coords }: EarthProps): JSX.Element {
 
   const radius = 1;
   return (
-    <group rotation={[0, 3, 0]}>
+    <group rotation={[0.4, 3, 0]}>
       {coords.map((coord) => (
         <Point
           position={coordToVec3(coord.lat, coord.lon, radius).position}
@@ -33,7 +33,7 @@ export function Earth({ coords }: EarthProps): JSX.Element {
           specularMap={ocean}
           specular={0x404040}
           map={earthColor}
-          shininess={20}
+          shininess={30}
         />
       </Sphere>
     </group>

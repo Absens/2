@@ -1,3 +1,4 @@
+
 import { Html } from "@react-three/drei";
 import type { MutableRefObject } from "react";
 import type { Vector3 } from "three";
@@ -17,17 +18,18 @@ export function Point({
 }: PointProps): JSX.Element {
   return (
     <Html
-      className={`point  ${coord.hash ? "hasHash" : ""}`}
+      className={`point  ${coord.hash}`}
       position={position}
       occlude={[forwardRef]}
     >
       {coord.icon ? (
+        <a href={coord.link}> 
         <img
           onClick={(e) => (window.location.hash = coord.hash)}
           alt={coord.title}
           title={coord.title}
           src={coord.icon}
-        />
+        /></a>
       ) : (
         <button onClick={(e) => (window.location.hash = coord.hash)}>
           {coord.title}
