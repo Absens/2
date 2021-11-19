@@ -28,12 +28,12 @@ export function Earth({ coords }: EarthProps): JSX.Element {
         />
       ))}
 
-      <Sphere ref={forwardRef} args={[radius, 164, 164]}>
+      <Sphere ref={forwardRef} args={[radius, 32, 32]}>
         <meshPhongMaterial
           specularMap={ocean}
           specular={0x222222}
           map={earthColor}
-          shininess={5}
+          shininess={0}
         />
       </Sphere>
     </group>
