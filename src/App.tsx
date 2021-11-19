@@ -504,7 +504,7 @@ export function App() {
           enablePan={false}
           autoRotateSpeed={0.2}
           autoRotate
-          minDistance={2}
+          minDistance={1.5}
           maxDistance={3}
         />
       </Canvas>
